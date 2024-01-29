@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/api/person")
-@CrossOrigin(origins = {"http://127.0.0.1:4000/","https://vardaansinha.github.io"})
+@CrossOrigin(origins = {"https://vardaansinha.github.io"})
 public class PersonApiController {
     //     @Autowired
     // private JwtTokenUtil jwtGen;
