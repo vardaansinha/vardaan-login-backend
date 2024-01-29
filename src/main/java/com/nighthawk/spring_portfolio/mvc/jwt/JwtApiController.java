@@ -38,10 +38,10 @@ public class JwtApiController {
 		final String token = jwtTokenUtil.generateToken(userDetails);
 		final ResponseCookie tokenCookie = ResponseCookie.from("jwt", token)
 			.httpOnly(true)
-			// .secure(true)
+			.secure(true)
 			.path("/")
 			.maxAge(3600)
-			.sameSite("Strict")
+			.sameSite("None")
 			// .domain("example.com") // Set to backend domain
 			.build();
 		return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, tokenCookie.toString()).build();
